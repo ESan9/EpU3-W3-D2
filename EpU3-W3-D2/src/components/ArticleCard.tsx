@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Article } from "../types/Article";
@@ -7,7 +6,7 @@ interface Props {
   article: Article;
 }
 
-export const ArticleCard: React.FC<Props> = ({ article }) => (
+export const ArticleCard = ({ article }: Props) => (
   <Col md={4} className="mb-4">
     <Card className="h-100">
       <Card.Img

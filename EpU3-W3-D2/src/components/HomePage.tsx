@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { fetchArticles } from "../services/api";
 import { Article } from "../types/Article";
 import { ArticleList } from "../components/ArticleList";
 import { ErrorMessage } from "../components/ErrorMessage";
 
-export const HomePage: React.FC = () => {
+export const HomePage = () => {
   const [articles, setArticles] = useState<Article[]>([]);
   const [error, setError] = useState<string | null>(null);
 

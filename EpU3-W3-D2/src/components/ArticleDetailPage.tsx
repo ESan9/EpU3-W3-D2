@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Card, Button, Spinner } from "react-bootstrap";
 import { fetchArticleById } from "../services/api";
 import { Article } from "../types/Article";
 import { ErrorMessage } from "../components/ErrorMessage";
 
-export const ArticleDetail: React.FC = () => {
+export const ArticleDetail = () => {
   const { id } = useParams<{ id: string }>();
   const [article, setArticle] = useState<Article | null>(null);
   const [error, setError] = useState<string | null>(null);
